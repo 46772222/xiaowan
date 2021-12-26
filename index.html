@@ -1,3 +1,407 @@
-小丸工具箱
-正在测试...
-请稍后再来
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>小丸工具箱官方网站</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <style type="text/css">
+    @-webkit-keyframes flip {
+        0% {
+            -webkit-transform: perspective(400px) translatez(0) rotatey(0) scale(1);
+            -webkit-animation-timing-function: ease-out;
+        }
+
+        40% {
+            -webkit-transform: perspective(400px) translatez(150px) rotatey(170deg) scale(1);
+            -webkit-animation-timing-function: ease-out;
+        }
+
+        50% {
+            -webkit-transform: perspective(400px) translatez(150px) rotatey(190deg) scale(1);
+            -webkit-animation-timing-function: ease-in;
+        }
+
+        80% {
+            -webkit-transform: perspective(400px) translatez(0) rotatey(360deg) scale(.95);
+            -webkit-animation-timing-function: ease-in;
+        }
+
+        100% {
+            -webkit-transform: perspective(400px) translatez(0) rotatey(360deg) scale(1);
+            -webkit-animation-timing-function: ease-in;
+        }
+    }
+
+    @-moz-keyframes flip {
+        0% {
+            -moz-transform: perspective(400px) translatez(0) rotatey(0) scale(1);
+            -moz-animation-timing-function: ease-out;
+        }
+
+        40% {
+            -moz-transform: perspective(400px) translatez(150px) rotatey(170deg) scale(1);
+            -moz-animation-timing-function: ease-out;
+        }
+
+        50% {
+            -moz-transform: perspective(400px) translatez(150px) rotatey(190deg) scale(1);
+            -moz-animation-timing-function: ease-in;
+        }
+
+        80% {
+            -moz-transform: perspective(400px) translatez(0) rotatey(360deg) scale(.95);
+            -moz-animation-timing-function: ease-in;
+        }
+
+        100% {
+            -moz-transform: perspective(400px) translatez(0) rotatey(360deg) scale(1);
+            -moz-animation-timing-function: ease-in;
+        }
+    }
+
+    @-o-keyframes flip {
+        0% {
+            -o-transform: perspective(400px) translatez(0) rotatey(0) scale(1);
+            -o-animation-timing-function: ease-out;
+        }
+
+        40% {
+            -o-transform: perspective(400px) translatez(150px) rotatey(170deg) scale(1);
+            -o-animation-timing-function: ease-out;
+        }
+
+        50% {
+            -o-transform: perspective(400px) translatez(150px) rotatey(190deg) scale(1);
+            -o-animation-timing-function: ease-in;
+        }
+
+        80% {
+            -o-transform: perspective(400px) translatez(0) rotatey(360deg) scale(.95);
+            -o-animation-timing-function: ease-in;
+        }
+
+        100% {
+            -o-transform: perspective(400px) translatez(0) rotatey(360deg) scale(1);
+            -o-animation-timing-function: ease-in;
+        }
+    }
+
+    @keyframes flip {
+        0% {
+            transform: perspective(400px) translatez(0) rotatey(0) scale(1);
+            animation-timing-function: ease-out;
+        }
+
+        40% {
+            transform: perspective(400px) translatez(150px) rotatey(170deg) scale(1);
+            animation-timing-function: ease-out;
+        }
+
+        50% {
+            transform: perspective(400px) translatez(150px) rotatey(190deg) scale(1);
+            animation-timing-function: ease-in;
+        }
+
+        80% {
+            transform: perspective(400px) translatez(0) rotatey(360deg) scale(.95);
+            animation-timing-function: ease-in;
+        }
+
+        100% {
+            transform: perspective(400px) translatez(0) rotatey(360deg) scale(1);
+            animation-timing-function: ease-in;
+        }
+    }
+
+    .animated.flip {
+        -webkit-backface-visibility: visible !important;
+        -webkit-animation-name: flip;
+        -moz-backface-visibility: visible !important;
+        -moz-animation-name: flip;
+        -o-backface-visibility: visible !important;
+        -o-animation-name: flip;
+        backface-visibility: visible !important;
+        animation-name: flip;
+    }
+
+
+
+    .jumbotron {
+        margin-bottom: 0px;
+        /*background-image: url(image/bg.jpg);*/
+        background-position: 0% 25%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        /*text-shadow: black 0.3em 0.3em 0.3em;*/
+        height: 500px;
+    }
+
+    #title {
+        color: #FF348E;
+        text-shadow: 0 0 6px #FF348E, -1px -1px #FFF, 1px -1px #444;
+        /* -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));  */
+        /*  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 20px #ff00de, 0 0 20px #ff00de;*/
+    }
+
+    #subtitle {
+        color: #FEF445;
+    }
+
+    .titleContainer {
+        margin: 60px auto;
+        text-align: center;
+        color: #FFCAE2
+    }
+
+    #downloadButton {
+        animation-delay: 4s;
+    }
+
+    .btn-pink {
+        color: #FFCAE2;
+        background-color: #E657A8;
+        border-color: #E00B96;
+        box-shadow: purple 0.1em 0.2em 0.2em;
+        border: 0px solid;
+        border-radius: 10px;
+    }
+
+    .btn-pink:hover,
+    .btn-pink:focus,
+    .btn-pink:active,
+    .btn-pink.active,
+    .open .dropdown-toggle.btn-pink {
+        color: #ffffff;
+        background-color: #EB3BC2;
+        border-color: #E00B96;
+    }
+
+    .btn-pink:active,
+    .btn-pink.active,
+    .open .dropdown-toggle.btn-pink {
+        background-image: none;
+    }
+
+    .btn-pink.disabled,
+    .btn-pink[disabled],
+    fieldset[disabled] .btn-pink,
+    .btn-pink.disabled:hover,
+    .btn-pink[disabled]:hover,
+    fieldset[disabled] .btn-pink:hover,
+    .btn-pink.disabled:focus,
+    .btn-pink[disabled]:focus,
+    fieldset[disabled] .btn-pink:focus,
+    .btn-pink.disabled:active,
+    .btn-pink[disabled]:active,
+    fieldset[disabled] .btn-pink:active,
+    .btn-pink.disabled.active,
+    .btn-pink[disabled].active,
+    fieldset[disabled] .btn-pink.active {
+        background-color: #E657A8;
+        border-color: #E00B96;
+    }
+
+    .btn-pink .badge {
+        color: #E657A8;
+        background-color: #ffffff;
+    }
+
+    #customService {
+        border: 1px dotted red;
+        color: #733856;
+        font-size: 16px;
+        background: #FDD0ED;
+        < !-- display: none;
+        -->
+    }
+
+    #DownloadBtn {
+        font-family: 'Microsoft YaHei';
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    @media screen and (max-width: 768px) {
+        .titleContainer {
+            width: 320px;
+        }
+    }
+
+    .modal {
+        height: 100%;
+        margin: 0px auto;
+    }
+
+
+    .test {
+        text-align: center;
+        font-family: simhei;
+        font-size: 30px;
+        font-weight: italic;
+        letter-spacing: 5px;
+        color: #f36;
+    }
+
+    .test {
+        cursor: pointer;
+        text-shadow: 0px 0px 2px #686868,
+            0px 1px 1px #ddd,
+            0px 2px 1px #d6d6d6,
+            0px 3px 1px #ccc,
+            0px 4px 1px #c5c5c5,
+            0px 5px 1px #c1c1c1,
+            0px 6px 1px #bbb,
+            0px 7px 1px #777,
+            0px 8px 3px rgba(100, 100, 100, 0.4),
+            0px 9px 5px rgba(100, 100, 100, 0.1),
+            0px 10px 7px rgba(100, 100, 100, 0.15),
+            0px 11px 9px rgba(100, 100, 100, 0.2),
+            0px 12px 11px rgba(100, 100, 100, 0.25),
+            0px 13px 15px rgba(100, 100, 100, 0.3);
+        -webkit-transition: all .1s linear;
+        transition: all .1s linear;
+    }
+
+    .test:hover {
+        text-shadow: 0px 0px 2px #686868,
+            0px 1px 1px #fff,
+            0px 2px 1px #fff,
+            0px 3px 1px #fff,
+            0px 4px 1px #fff,
+            0px 5px 1px #fff,
+            0px 6px 1px #fff,
+            0px 7px 1px #777,
+            0px 8px 3px #fff,
+            0px 9px 5px #fff,
+            0px 10px 7px #fff,
+            0px 11px 9px #fff,
+            0px 12px 11px #fff,
+            0px 13px 15px #fff;
+        -webkit-transition: all .1s linear;
+        transition: all .1s linear;
+    }
+    </style>
+</head>
+
+<body>
+    <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="https://maruko.appinn.me/">Maruko Toolbox(点击跳转官网/已弃更)</a>
+            </div>
+        </div>
+    </header>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="bs-docs-masthead" id="content" role="main">
+        <div class="jumbotron">
+            <div class="titleContainer">
+                <img id="logo" class="animated zoomIn" height="144" width="144" src="image/wan.png">
+                <h1 id="title" class="animated fadeIn animationObject">小丸工具箱</h1>
+                <p class="animated fadeIn animationObject">更新日期：2016年10月23日 <br>本网站非官网,只提供下载源</p>
+                <br />
+                <p>
+                    <button class="btn btn-danger btn-lg" id="DownloadBtn" data-toggle="modal" data-target="#myModal"><a href="#download" style="color: #FFF;">下载 DOWNLOAD</a></button>
+                </p>
+            </div>
+        </div>
+    </main>
+    <div class="bc-social">
+        <div class="container">
+            <ul class="bc-social-buttons">
+                <li class="social-qq transitionObject">
+                    <a class="transitionObject" target="_blank" href="https://jq.qq.com/?_wv=1027&k=5mOCpGa" style="text-decoration:none;"> <i class="fa fa-qq"></i>
+                        QQ群 234289875 和 593173805
+                    </a>
+                </li>
+                <li class="social-weibo">
+                    <a class="transitionObject" target="_blank" href="https://weibo.com/xiaowan3" title="作者微博" style="text-decoration:none;"> <i class="fa fa-weibo"></i>
+                        微博 @小丸酱
+                    </a>
+                </li>
+                <li class="social-forum">
+                    <a class="transitionObject" target="_blank" href="#" title="社区" style="text-decoration:none;"> <i class="fa fa-comments"></i>
+                        小丸之家社区(弃用)
+                    </a>
+                </li>
+            </ul>
+            <br />
+            <span id="customService"><del>提供定制服务
+                <br />
+                小型网站建设、数据抓取、文档处理自动化、音视频处理工具的开发等。
+                <br />
+                价格协商，可联系</del><a href="#"><span class="__cf_email__">请左上角去官网</span></a><span style="color:red">(软件使用问题请加QQ群。非定制相关事项恕不回应)</span>
+            </span>
+        </div>
+    </div>
+    <div class="container textContainer">
+        <div class="row">
+            <div class="col-sm-4 col-xs-12">
+                <h2 class="page-header">简介</h2>
+                <p>
+                    <p>小丸工具箱是一款用于处理音视频等多媒体文件的软件。是一款x264、ffmpeg等命令行程序的图形界面。它的目标是让视频压制变得简单、轻松。</p>
+                    主要功能：
+                    <ul>
+                        <li>高质量的H264+AAC视频压制</li>
+                        <li>ASS/SRT字幕内嵌到视频</li>
+                        <li>AAC/WAV/FLAC/ALAC音频转换</li>
+                        <li>MP4/MKV/FLV的无损抽取和封装</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <h2 class="page-header" id="download">下载</h2>
+                <ul>
+                  <p>关于我自己去qq群管理要软件这件事----软件包含 小丸工具箱236版、236UpDateTools、经典版、哔哩哔哩压制工具等</p>
+                  <li><a target="_blank" href="https://mega.nz/folder/JhJRjIIa#7clijIhlModrHXWEcFx9Fg">MEGA永久链接</a></li>
+                  <li><a target="_blank" href="chaoxing.html">超星网盘</a></li>
+                  <li><a target="_blank" href="https://cloud.189.cn/web/share?code=naAVVzYFzuYv">天翼云盘 访问码：p9bz</a></li>
+                  <li><a target="_blank" href="https://www.aliyundrive.com/s/msGhqvLMztx">阿里云盘(不支持压缩格式软件分享)</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <h2 class="page-header">感谢</h2>
+                <p>
+                    感谢zj262144，本软件的预置参数参考了他的
+                    <a target="_blank" href="http://blog.sina.com.cn/s/blog_3df9d2330100zcy4.html">《尽量不浪费压制时间的简单视频高压》</a>
+                    中的参数。
+                </p>
+                <p>
+                    感谢06_taro编译的更强大好用的x264以及小7编译的<a target="_blank" href="https://maruko.appinn.me/7mod.html">小丸工具箱专用版x264</a>。
+                </p>
+                <p>
+                    感谢妹控程序宅老猫，他是带领我进入编程大门的引路人，在我初学编程的时候给了我极大的帮助。
+                </p>
+                <p>
+                    感谢温柔傲娇的月儿，为了使得软件更加易用付出大量精力，能认识月儿我倍感荣幸。
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer ">
+        <div class="container">
+            <div class="row footer-bottom text-center">
+                <p>
+                    ©2011-2015 Maruko
+                </p>
+            </div>
+        </div>
+    </footer>
+    </body>
+
+</html>
